@@ -11,25 +11,30 @@ public class LinkedList {
         }
     }
 
-        private Node head;
+    private Node head;
 
-        public void addFront(int data) {
 
-            // Create new node
-            Node newNode = new Node(data);
+    /**
+     * O(1) CONSTANT
+     */
+    public void addFront(int data) {
 
-            // if head...
-            if(head == null) {
-                head = newNode;
-                return;
-            }
+        // Create new node
+        Node newNode = new Node(data);
 
-            // Set it's next to the current head
-            newNode.next = head;
-
-            // Set current head be the new head
+        // if head...
+        if(head == null) {
             head = newNode;
+            return;
+        }
+
+        // Set it's next to the current head
+        newNode.next = head;
+
+        // Set current head be the new head
+        head = newNode;
     }
+
 
     public int getFirst() {
         if(head == null) {
@@ -38,6 +43,18 @@ public class LinkedList {
         return head.data;
     }
 
+
+    /**
+     * O(1) CONSTANT
+     */
+    public void clear() {
+        head = null;
+    }
+
+
+    /**
+     * O(n) LINEAR
+     */
     public int getLast() {
          if(head == null) {
              throw new IllegalStateException("Empty list");
@@ -53,6 +70,10 @@ public class LinkedList {
         return current.data;
     }
 
+
+    /**
+     * O(n) LINEAR
+     */
     public void addBack(int data) {
         Node newNode = new Node(data);
 
@@ -72,6 +93,10 @@ public class LinkedList {
         current.next = newNode;
     }
 
+
+    /**
+     * O(n) LINEAR
+     */
     public int size() {
         // if head set and return
         if(head == null) {
@@ -88,10 +113,11 @@ public class LinkedList {
         return count;
     }
 
-    public void clear() {
-        head = null;
-    }
 
+
+    /**
+     * O(n) LINEAR
+     */
     public void deleteValue(int data) {
         // if head set and return
         if(head == null) {
