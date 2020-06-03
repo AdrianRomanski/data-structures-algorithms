@@ -1,4 +1,4 @@
-package adrianromanski.data_structures;
+package adrianromanski.data_structures.hash_table;
 
 public class HashTable {
 

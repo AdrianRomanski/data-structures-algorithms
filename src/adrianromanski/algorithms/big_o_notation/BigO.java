@@ -1,4 +1,4 @@
-package adrianromanski.data_structures.big_o_notation;
+package adrianromanski.algorithms.big_o_notation;
 
 public class BigO {
 

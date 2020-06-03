@@ -1,6 +1,6 @@
-package adrianromanski.data_structures.linked_list;
+package adrianromanski.data_structures.hash_table;
 
-import adrianromanski.data_structures.HashTable;
+import adrianromanski.data_structures.hash_table.HashTable;
 import org.junit.Before;
 import org.junit.Test;
 
