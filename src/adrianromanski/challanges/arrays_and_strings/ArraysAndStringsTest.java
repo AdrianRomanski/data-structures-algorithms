@@ -12,7 +12,7 @@ import static org.junit.Assert.assertTrue;
 
 public class ArraysAndStringsTest {
     private UniqueCharacterDetector charDetector;
-//    private PermutationDetector permDetector;
+    private PermutationDetector permDetector;
 //    private URLConverter urlConverter;
 //    private PalindromeDetector palindromeDetector;
 //    private OneAwayDetector oneAwayDetector;
@@ -23,7 +23,7 @@ public class ArraysAndStringsTest {
     @Before
     public void SetUp() {
         charDetector = new UniqueCharacterDetector();
-//            permDetector = new PermutationDetector();
+        permDetector = new PermutationDetector();
 //            urlConverter = new URLConverter();
 //            palindromeDetector = new PalindromeDetector();
 //            oneAwayDetector = new OneAwayDetector();
@@ -44,14 +44,15 @@ public class ArraysAndStringsTest {
         assertFalse(charDetector.isUnique2("aa"));
         assertTrue(charDetector.isUnique2("abcdefghijklmnopqrstuvwxyz"));
     }
-}
 
-//    @Test
-//    public void PermutationOfTheOther() {
-//            // Challenge: Given two strings, check if one is a permutation of the other
-//            Assert.assertTrue(permDetector.isPermutation("abc", "cba"));
-//            Assert.assertFalse(permDetector.isPermutation("abc", "xyz"));
-//            }
+
+    @Test
+    public void PermutationOfTheOther() {
+            // Challenge: Given two strings, check if one is a permutation of the other
+            Assert.assertTrue(permDetector.isPermutation("abc", "cba"));
+            Assert.assertFalse(permDetector.isPermutation("abc", "xyz"));
+            }
+}
 //
 //    @Test
 //    public void URLIfy() {
