@@ -1,7 +1,7 @@
 package adrianromanski.challanges.arrays_and_strings;
 
 
-import com.sun.javafx.css.converters.URLConverter;
+
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -13,7 +13,7 @@ import static org.junit.Assert.assertTrue;
 public class ArraysAndStringsTest {
     private UniqueCharacterDetector charDetector;
     private PermutationDetector permDetector;
-//    private URLConverter urlConverter;
+    private URLConverter urlConverter;
 //    private PalindromeDetector palindromeDetector;
 //    private OneAwayDetector oneAwayDetector;
 //    private Compressor compressor;
@@ -24,7 +24,7 @@ public class ArraysAndStringsTest {
     public void SetUp() {
         charDetector = new UniqueCharacterDetector();
         permDetector = new PermutationDetector();
-//            urlConverter = new URLConverter();
+        urlConverter = new URLConverter();
 //            palindromeDetector = new PalindromeDetector();
 //            oneAwayDetector = new OneAwayDetector();
 //            compressor = new Compressor();
@@ -48,20 +48,23 @@ public class ArraysAndStringsTest {
 
     @Test
     public void PermutationOfTheOther() {
-            // Challenge: Given two strings, check if one is a permutation of the other
-            Assert.assertTrue(permDetector.isPermutation("abc", "cba"));
-            Assert.assertFalse(permDetector.isPermutation("abc", "xyz"));
-            }
+        // Challenge: Given two strings, check if one is a permutation of the other
+        Assert.assertTrue(permDetector.isPermutation("abc", "cba"));
+        Assert.assertFalse(permDetector.isPermutation("abc", "xyz"));
+    }
+
+
+    @Test
+    public void URLIfy() {
+        // Challenge: See if you can replaces all the spaces in a a string with the
+        // ASCII symbol for space '%20'. Assume you are given the length of the final
+        // string. Hint: Use array of char[]
+        Assert.assertEquals("My%20Home%20Page", urlConverter.urlifyWithoutReplaceAll("My Home Page    ", 16));
+        Assert.assertEquals("My%20Home%20Page", urlConverter.urlifyWithReplaceAll("My Home Page    ", 16));
+
+
+    }
 }
-//
-//    @Test
-//    public void URLIfy() {
-//            // Challenge: See if you can replaces all the spaces in a a string with the
-//            // ASCII symbol for space '%20'. Assume you are given the length of the final
-//            // string. Hint: Use array of char[]
-//            Assert.assertEquals("My%20Home%20Page", urlConverter.urlify("My Home Page    ", 16));
-//
-//            }
 //
 //    @Test
 //    public void Palindromes() {
