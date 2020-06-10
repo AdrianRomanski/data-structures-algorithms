@@ -14,7 +14,7 @@ public class ArraysAndStringsTest {
     private UniqueCharacterDetector charDetector;
     private PermutationDetector permDetector;
     private URLConverter urlConverter;
-//    private PalindromeDetector palindromeDetector;
+    private PalindromeDetector palindromeDetector;
 //    private OneAwayDetector oneAwayDetector;
 //    private Compressor compressor;
 //    private Zeroer1 zeroer1;
@@ -25,7 +25,7 @@ public class ArraysAndStringsTest {
         charDetector = new UniqueCharacterDetector();
         permDetector = new PermutationDetector();
         urlConverter = new URLConverter();
-//            palindromeDetector = new PalindromeDetector();
+        palindromeDetector = new PalindromeDetector();
 //            oneAwayDetector = new OneAwayDetector();
 //            compressor = new Compressor();
 //            zeroer1 = new Zeroer1();
@@ -64,19 +64,19 @@ public class ArraysAndStringsTest {
 
 
     }
+
+    @Test
+    public void Palindromes() {
+        // Challenge: Detect if a given string is a palindrome.
+        // A palindrome is a word that can be spelt the same way forwards and backwards.
+
+        Assert.assertTrue(palindromeDetector.isPalindrome("abba"));
+        Assert.assertTrue(palindromeDetector.isPalindrome("mom"));
+        Assert.assertTrue(palindromeDetector.isPalindrome("dad"));
+        Assert.assertFalse(palindromeDetector.isPalindrome("rush"));
+        Assert.assertFalse(palindromeDetector.isPalindrome("yes"));
+    }
 }
-//
-//    @Test
-//    public void Palindromes() {
-//            // Challenge: Detect if a given string is a palindrome.
-//            // A palindrome is a word that can be spelt the same way forwards and backwards.
-//
-//            Assert.assertTrue(palindromeDetector.isPalindrome("abba"));
-//            Assert.assertTrue(palindromeDetector.isPalindrome("mom"));
-//            Assert.assertTrue(palindromeDetector.isPalindrome("dad"));
-//            Assert.assertFalse(palindromeDetector.isPalindrome("rush"));
-//            Assert.assertFalse(palindromeDetector.isPalindrome("yes"));
-//            }
 //
 //    @Test
 //    public void OneAway() {
