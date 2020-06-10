@@ -15,7 +15,7 @@ public class ArraysAndStringsTest {
     private PermutationDetector permDetector;
     private URLConverter urlConverter;
     private PalindromeDetector palindromeDetector;
-//    private OneAwayDetector oneAwayDetector;
+    private OneAwayDetector oneAwayDetector;
 //    private Compressor compressor;
 //    private Zeroer1 zeroer1;
 //    private Zeroer2 zeroer2;
@@ -26,7 +26,7 @@ public class ArraysAndStringsTest {
         permDetector = new PermutationDetector();
         urlConverter = new URLConverter();
         palindromeDetector = new PalindromeDetector();
-//            oneAwayDetector = new OneAwayDetector();
+        oneAwayDetector = new OneAwayDetector();
 //            compressor = new Compressor();
 //            zeroer1 = new Zeroer1();
 //            zeroer2 = new Zeroer2();
@@ -76,27 +76,28 @@ public class ArraysAndStringsTest {
         Assert.assertFalse(palindromeDetector.isPalindrome("rush"));
         Assert.assertFalse(palindromeDetector.isPalindrome("yes"));
     }
+
+
+    @Test
+    public void OneAway() {
+        // Challenge: There are three types of edits that can be performed on strings: insert a character,
+        // remove a character, or replace a character. Given two strings, write a function to check if they are
+        // one or zero edits away.
+
+        Assert.assertFalse(oneAwayDetector.oneAway("pale", "paleXXXX"));
+
+        Assert.assertTrue(oneAwayDetector.oneAway("pale", "ple"));
+        Assert.assertTrue(oneAwayDetector.oneAway("pales", "pale"));
+        Assert.assertTrue(oneAwayDetector.oneAway("pale", "bale"));
+        Assert.assertFalse(oneAwayDetector.oneAway("pale", "bake"));
+
+        Assert.assertTrue(oneAwayDetector.oneAway("pale", "aale"));
+        Assert.assertTrue(oneAwayDetector.oneAway("pale", "pble"));
+        Assert.assertTrue(oneAwayDetector.oneAway("pale", "palk"));
+
+        Assert.assertFalse(oneAwayDetector.oneAway("pale", "bakeerer"));
+    }
 }
-//
-//    @Test
-//    public void OneAway() {
-//            // Challenge: There are three types of edits that can be performed on strings: insert a character,
-//            // remove a character, or replace a character. Given two strings, write a function to check if they are
-//            // one or zero edits away.
-//
-//            Assert.assertFalse(oneAwayDetector.oneAway("pale", "paleXXXX"));
-//
-//            Assert.assertTrue(oneAwayDetector.oneAway("pale", "ple"));
-//            Assert.assertTrue(oneAwayDetector.oneAway("pales", "pale"));
-//            Assert.assertTrue(oneAwayDetector.oneAway("pale", "bale"));
-//            Assert.assertFalse(oneAwayDetector.oneAway("pale", "bake"));
-//
-//            Assert.assertTrue(oneAwayDetector.oneAway("pale", "aale"));
-//            Assert.assertTrue(oneAwayDetector.oneAway("pale", "pble"));
-//            Assert.assertTrue(oneAwayDetector.oneAway("pale", "palk"));
-//
-//            Assert.assertFalse(oneAwayDetector.oneAway("pale", "bakeerer"));
-//            }
 //
 //    @Test
 //    public void Compressor() {
