@@ -24,11 +24,6 @@ public class Compressor {
                 }
             }
         }
-        String compressed = builder.toString();
-        if(compressed.length() < input.length()) {
-            return compressed;
-        } else {
-            return input;
-        }
+        return builder.length() < input.length() ? builder.toString() : input;
     }
 }
