@@ -16,7 +16,7 @@ public class ArraysAndStringsTest {
     private URLConverter urlConverter;
     private PalindromeDetector palindromeDetector;
     private OneAwayDetector oneAwayDetector;
-//    private Compressor compressor;
+    private Compressor compressor;
 //    private Zeroer1 zeroer1;
 //    private Zeroer2 zeroer2;
 
@@ -27,7 +27,7 @@ public class ArraysAndStringsTest {
         urlConverter = new URLConverter();
         palindromeDetector = new PalindromeDetector();
         oneAwayDetector = new OneAwayDetector();
-//            compressor = new Compressor();
+        compressor = new Compressor();
 //            zeroer1 = new Zeroer1();
 //            zeroer2 = new Zeroer2();
     }
@@ -97,22 +97,23 @@ public class ArraysAndStringsTest {
 
         Assert.assertFalse(oneAwayDetector.oneAway("pale", "bakeerer"));
     }
+
+
+    @Test
+    public void Compressor() {
+            // Challenge: Give a string with repeating characters (i.e. "aaabb") write
+            // an algorithm that will compress the string down to the character, followed
+            // by the number of times it appears in the string (i.e "a3b2").
+            // If the compressed string is not smaller than original, return original.
+
+            Assert.assertEquals("a3b2", compressor.compress("aaabb"));
+            Assert.assertEquals("aabb", compressor.compress("aabb"));
+            Assert.assertEquals("ab", compressor.compress("ab"));
+            Assert.assertEquals("abc", compressor.compress("abc"));
+            Assert.assertEquals("z3", compressor.compress("zzz"));
+            Assert.assertEquals("aabbaabb", compressor.compress("aabbaabb")); // not shorter
+            }
 }
-//
-//    @Test
-//    public void Compressor() {
-//            // Challenge: Give a string with repeating characters (i.e. "aaabb") write
-//            // an algorithm that will compress the string down to the character, followed
-//            // by the number of times it appears in the string (i.e "a3b2").
-//            // If the compressed string is not smaller than original, return original.
-//
-//            Assert.assertEquals("a3b2", compressor.compress("aaabb"));
-//            Assert.assertEquals("aabb", compressor.compress("aabb"));
-//            Assert.assertEquals("ab", compressor.compress("ab"));
-//            Assert.assertEquals("abc", compressor.compress("abc"));
-//            Assert.assertEquals("z3", compressor.compress("zzz"));
-//            Assert.assertEquals("aabbaabb", compressor.compress("aabbaabb")); // not shorter
-//            }
 //
 //    @Test
 //    public void ZeroOutMatrixRowsAndColumnsSolution1() {
