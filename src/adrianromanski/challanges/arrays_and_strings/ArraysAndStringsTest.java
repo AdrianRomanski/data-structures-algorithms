@@ -28,7 +28,7 @@ public class ArraysAndStringsTest {
         palindromeDetector = new PalindromeDetector();
         oneAwayDetector = new OneAwayDetector();
         compressor = new Compressor();
-//            zeroer1 = new Zeroer1();
+//        zeroer1 = new Zeroer1();
 //            zeroer2 = new Zeroer2();
     }
 
