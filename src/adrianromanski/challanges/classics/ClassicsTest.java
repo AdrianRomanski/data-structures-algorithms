@@ -13,7 +13,7 @@ public class   ClassicsTest {
     private SieveOfEratosthenes sieveOfEratosthenes;
     private StringReverser stringReverser;
     private IntReverser intReverser;
-//    private Anagram anagram;
+    private Anagram anagram;
 //    private CharacterCount characterCount;
 
     @Before
@@ -24,7 +24,7 @@ public class   ClassicsTest {
         sieveOfEratosthenes = new SieveOfEratosthenes();
         stringReverser = new StringReverser();
         intReverser = new IntReverser();
-//        anagram = new Anagram();
+        anagram = new Anagram();
 //        characterCount = new CharacterCount();
     }
 
@@ -125,26 +125,23 @@ public class   ClassicsTest {
         Assert.assertEquals(321, intReverser.reverse(123));
         Assert.assertEquals(-321, intReverser.reverse(-123));
     }
-//
-//    @Test
-//    public void Anagram() {
-//        // Challenge: Given two strings, write an algorithm to detect whether one word is an anagram of the other.
-//        // An anagram is a word that can be made by changing the order of the letters in another word.
-//        //
-//        // For example:
-//        // tar => rat
-//        // state => taste
-//
-//        // Soln1
-//        Assert.assertTrue(anagram.isAnagram1("arc", "car"));
-//        Assert.assertTrue(anagram.isAnagram1("night", "thing"));
-//        Assert.assertFalse(anagram.isAnagram1("cat", "dog"));
-//
-//        // Soln2
-//        Assert.assertTrue(anagram.isAnagram2("arc", "car"));
-//        Assert.assertTrue(anagram.isAnagram2("night", "thing"));
-//        Assert.assertFalse(anagram.isAnagram2("cat", "dog"));
-//    }
+
+    @Test
+    public void Anagram() {
+        // Challenge: Given two strings, write an algorithm to detect whether one word is an anagram of the other.
+        // An anagram is a word that can be made by changing the order of the letters in another word.
+        //
+        // For example:
+        // tar => rat
+        // state => taste
+
+        // Soln1
+        Assert.assertTrue(anagram.isAnagram("arc", "car"));
+        Assert.assertTrue(anagram.isAnagram("night", "thing"));
+        Assert.assertFalse(anagram.isAnagram("cat", "dog"));
+
+
+    }
 //
 //    @Test
 //    public void CharacterCount() {
