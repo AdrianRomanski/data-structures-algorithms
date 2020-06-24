@@ -10,7 +10,7 @@ public class   ClassicsTest {
     private FizzBuzz fizzBuzz;
     private RansomNote ransomNote;
     private CaesarCipher caesarCipher;
-//    private SieveOfEratosthenes sieveOfEratosthenes;
+    private SieveOfEratosthenes sieveOfEratosthenes;
 //    private StringReverser stringReverser;
 //    private IntReverser intReverser;
 //    private Anagram anagram;
@@ -21,7 +21,7 @@ public class   ClassicsTest {
         fizzBuzz = new FizzBuzz();
         ransomNote = new RansomNote();
         caesarCipher = new CaesarCipher();
-//        sieveOfEratosthenes = new SieveOfEratosthenes();
+        sieveOfEratosthenes = new SieveOfEratosthenes();
 //        stringReverser = new StringReverser();
 //        intReverser = new IntReverser();
 //        anagram = new Anagram();
@@ -93,16 +93,16 @@ public class   ClassicsTest {
         Assert.assertEquals("A B C", caesarCipher.decrypt("D E F", 3));
 
     }
-//
-//    @Test
-//    public void SieveOfEratosthenes() {
-//        // Challenge: Given a number n, print all primes smaller than or equal to n (assume n < 30).
-//        //
-//        // Hint: https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes
-//        //
-//
-//        sieveOfEratosthenes.print(30);
-//    }
+
+    @Test
+    public void SieveOfEratosthenes() {
+        // Challenge: Given a number n, print all primes smaller than or equal to n (assume n < 30).
+        //
+        // Hint: https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes
+        //
+
+        sieveOfEratosthenes.print(30);
+    }
 //
 //    @Test
 //    public void ReverseString() {
