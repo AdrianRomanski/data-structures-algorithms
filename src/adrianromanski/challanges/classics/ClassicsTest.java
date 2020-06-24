@@ -11,7 +11,7 @@ public class   ClassicsTest {
     private RansomNote ransomNote;
     private CaesarCipher caesarCipher;
     private SieveOfEratosthenes sieveOfEratosthenes;
-//    private StringReverser stringReverser;
+    private StringReverser stringReverser;
 //    private IntReverser intReverser;
 //    private Anagram anagram;
 //    private CharacterCount characterCount;
@@ -22,7 +22,7 @@ public class   ClassicsTest {
         ransomNote = new RansomNote();
         caesarCipher = new CaesarCipher();
         sieveOfEratosthenes = new SieveOfEratosthenes();
-//        stringReverser = new StringReverser();
+        stringReverser = new StringReverser();
 //        intReverser = new IntReverser();
 //        anagram = new Anagram();
 //        characterCount = new CharacterCount();
@@ -103,20 +103,18 @@ public class   ClassicsTest {
 
         sieveOfEratosthenes.print(30);
     }
-//
-//    @Test
-//    public void ReverseString() {
-//        // Challenge: Given a string, return it's reverse.
-//        // "abc" => "cba"
-//
-//        // Soln1
-//        Assert.assertEquals("olleH", stringReverser.soln1("Hello"));
-//        Assert.assertEquals("maS", stringReverser.soln1("Sam"));
-//
-//        // Soln2
-//        Assert.assertEquals("norT", stringReverser.soln2("Tron"));
-//        Assert.assertEquals("nnylF", stringReverser.soln2("Flynn"));
-//    }
+
+    @Test
+    public void ReverseString() {
+        // Challenge: Given a string, return it's reverse.
+        // "abc" => "cba"
+
+        // Soln1
+        Assert.assertEquals("olleH", stringReverser.reverse("Hello"));
+        Assert.assertEquals("maS", stringReverser.reverse("Sam"));
+
+
+    }
 //
 //    @Test
 //    public void ReverseInt() {
