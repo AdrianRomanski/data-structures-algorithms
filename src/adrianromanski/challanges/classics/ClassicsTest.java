@@ -12,7 +12,7 @@ public class   ClassicsTest {
     private CaesarCipher caesarCipher;
     private SieveOfEratosthenes sieveOfEratosthenes;
     private StringReverser stringReverser;
-//    private IntReverser intReverser;
+    private IntReverser intReverser;
 //    private Anagram anagram;
 //    private CharacterCount characterCount;
 
@@ -23,7 +23,7 @@ public class   ClassicsTest {
         caesarCipher = new CaesarCipher();
         sieveOfEratosthenes = new SieveOfEratosthenes();
         stringReverser = new StringReverser();
-//        intReverser = new IntReverser();
+        intReverser = new IntReverser();
 //        anagram = new Anagram();
 //        characterCount = new CharacterCount();
     }
@@ -115,16 +115,16 @@ public class   ClassicsTest {
 
 
     }
-//
-//    @Test
-//    public void ReverseInt() {
-//        // Challenge: Given an int, reverse its digits.
-//        // x = 123, return 321
-//        // x= -123, return -321
-//
-//        Assert.assertEquals(321, intReverser.reverse(123));
-//        Assert.assertEquals(-321, intReverser.reverse(-123));
-//    }
+
+    @Test
+    public void ReverseInt() {
+        // Challenge: Given an int, reverse its digits.
+        // x = 123, return 321
+        // x= -123, return -321
+
+        Assert.assertEquals(321, intReverser.reverse(123));
+        Assert.assertEquals(-321, intReverser.reverse(-123));
+    }
 //
 //    @Test
 //    public void Anagram() {
